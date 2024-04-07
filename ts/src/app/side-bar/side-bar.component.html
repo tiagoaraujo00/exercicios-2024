@@ -1,0 +1,21 @@
+<aside class="side-bar_container">
+  <header class="side-bar_container-header">
+    <h1 class="side-bar_container-header-title">{{ title }}</h1>
+  </header>
+  <div>
+    <img class="side-bar_container-image" src="assets/logo.svg" />
+
+    <ul class="side-bar_container-menu">
+      <li
+        class="side-bar_container-menu-item"
+        role="button"
+        *ngFor="let item of menuItems; let i = index"
+        [ngClass]="{ 'menu-item-checked': selectedItem === item.value }"
+        [ngStyle]="{ 'animation-delay': 0.3 + i * 0.15 + 's' }"
+        (click)="onSelecteItem(item.value)"
+      >
+        {{ item.label }}
+      </li>
+    </ul>
+  </div>
+</aside>
