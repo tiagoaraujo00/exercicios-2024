@@ -1,6 +1,6 @@
-<div>
-  <div>
-    <span>
+<div class="main-details-container">
+  <div class="main-details-container-actions">
+    <span class="main-details-container-actions-buttons">
       <app-button
         [buttonIcon]="'assets/donwload-icon.svg'"
         [buttonAlt]="'ícone de download'"
@@ -9,15 +9,15 @@
       <app-button
         [buttonIcon]="'assets/star-icon.svg'"
         [buttonAlt]="'ícone de ums estrela'"
-        ></app-button
-      >
+      ></app-button>
       <app-button
         [buttonIcon]="'assets/doi-icon.svg'"
         [buttonAlt]="'ícone escrito doi'"
-        ></app-button
-      >
+      ></app-button>
     </span>
-    <p></p>
+    <p class="main-details-container-actions-title">COMO CITAR ESSE TRABALHO?</p>
   </div>
-  <div>details</div>
+  <div>
+    <app-dropdown [dropdownTitle]="'Detalhes'"></app-dropdown>
+  </div>
 </div>
