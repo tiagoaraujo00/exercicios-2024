@@ -1,1 +1,36 @@
-<div class="app-header-container">asd</div>
+<div class="app-header-container">
+  <div class="app-header-container-left">
+    <p class="app-header-container-left-title">{{ headerData.title }}</p>
+    <p class="app-header-container-left-description">
+      {{ headerData.description }}
+    </p>
+    <p class="app-header-container-left-issn">ISSN: {{ headerData.issin }}</p>
+  </div>
+  <div class="app-header-container-right">
+    <button class="app-header-container-right-language">
+      <img
+        class="app-header-container-right-language-icon"
+        src="assets/language-icon.svg"
+        alt="language icon"
+      />
+      <p>PT,BR</p>
+      <img src="assets/dropdown-icon.svg" alt="dropdown icon" />
+    </button>
+    <div class="app-header-container-right-login_data">
+      <span>
+        <p class="app-header-container-right-login_data-welcome">Bem Vindo!</p>
+        <p class="app-header-container-right-login_data-email">
+          {{ profileData.email }}
+        </p>
+      </span>
+      <img
+        class="app-header-container-right-login_data-profile"
+        src="{{ profileData.image }}"
+        alt="image profile"
+      />
+      <span class="app-header-container-right-login_data-notification">
+        <small>2</small>
+      </span>
+    </div>
+  </div>
+</div>

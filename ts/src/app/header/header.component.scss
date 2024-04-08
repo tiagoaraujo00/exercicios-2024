@@ -2,8 +2,101 @@
 
 .app-header-container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--yellow-100);
   width: 100%;
   height: 100%;
   padding: 0 var(--spacing-xxl);
+  font-family: var(--font-roboto);
+  color: var(--brown-100);
+
+  &-right {
+    display: flex;
+    gap: 22px;
+    font-family: var(--font-quicksand);
+
+    &-language {
+      border-radius: 3px;
+      padding: 5px 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      border: 1px solid var(--gray-200);
+      width: min-content;
+      background-color: transparent;
+      cursor: pointer;
+      font-size: var(--size-xs);
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: var(--white);
+        background-color: var(--white);
+      }
+
+      &-icon {
+        margin-bottom: 5px;
+      }
+    }
+
+    &-login_data {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      position: relative;
+
+      > span {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      &-welcome {
+        font-size: var(--size-xs);
+      }
+      &-email {
+        font-size: var(--size-xxs);
+      }
+
+      &-notification {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: var(--size-xs);
+        height: var(--size-xs);
+        background-color: var(--red-300);
+        border-radius: 100%;
+        font-size: .625rem;
+        color: var(--white);
+        display: flex;
+        justify-content: center;
+
+        > small {
+          margin-right: 4px;
+        }
+      }
+
+      &-profile {
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  &-left {
+    &-title {
+      font-size: var(--size-xs);
+      font-weight: 400;
+      margin-bottom: 2px;
+    }
+    &-description {
+      font-size: 22px;
+      line-height: 25.78px;
+    }
+    &-issn {
+      font-size: var(--size-xs);
+    }
+  }
 }
