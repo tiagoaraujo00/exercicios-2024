@@ -1,12 +1,13 @@
 .main-details-container {
   display: flex;
   flex-direction: column;
+  gap: 8px;
 
   &-actions {
     display: flex;
     flex-direction: column;
     align-items: end;
-    gap: var(--spacing-sm);
+    gap: 8px;
 
     &-buttons {
       display: flex;
@@ -17,8 +18,30 @@
       font-size: var(--size-xs);
       text-align: right;
       color: var(--orange-200);
-      line-height: 25px;
-      letter-spacing: .0313rem;
+      letter-spacing: 0.0313rem;
+      line-height: 18px;
     }
-  } 
+  }
+
+  .dropdown-details {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+
+    &-description {
+      font-family: var(--font-quicksand);
+      font-weight: 400;
+      list-style: none;
+      font-size: var(--size-xxs);
+      color: var(--gray-300);
+
+      &.font-normal {
+        font-size: var(--size-xs);
+      }
+
+      strong {
+        font-weight: 700;
+      }
+    }
+  }
 }
