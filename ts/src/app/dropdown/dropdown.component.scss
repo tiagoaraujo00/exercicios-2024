@@ -1,0 +1,16 @@
+.app-dropdown {
+  border-radius: 1px;
+  border: 1px solid var(--grey-50);
+
+  &-header {
+    padding: 11px 15px 9px 15px;
+    background-color: var(--yellow-100);
+    font-family: var(--font-roboto);
+    color: var(--grey-400);
+  }
+
+  &-content {
+    padding: 15px;
+    overflow: auto;
+  }
+}
