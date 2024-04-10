@@ -1,0 +1,19 @@
+.app-sumary-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-xl);
+  font-family: var(--font-quicksand);
+  font-size: var(--size-xs);
+  color: var(--gray-300);
+  text-align: justify;
+
+  &-text {
+    white-space: pre-line;
+  }
+
+  &-show-more-button {
+    color: var(--orange-500);
+    transition: all .2s ease;
+    text-align: right;
+  }
+}

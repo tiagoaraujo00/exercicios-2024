@@ -1,0 +1,21 @@
+<div>
+  <app-dropdown
+    role="button"
+    [dropdownTitle]="'Resumo'"
+    [dropdownMaxHeight]="'fit-content'"
+    (click)="handleClickDropdown()"
+    style="cursor: pointer"
+  >
+    <div class="app-sumary-content">
+      <p class="app-sumary-content-text">
+        {{ dropdownText[dropdownMode] }}
+      </p>
+      <span
+        class="app-sumary-content-show-more-button btn-show-more"
+        role="button"
+      >
+        {{ dropdownModeText }}
+      </span>
+    </div>
+  </app-dropdown>
+</div>

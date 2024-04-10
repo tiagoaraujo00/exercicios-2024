@@ -8,9 +8,10 @@ import { MainComponent } from './main/main.component';
 import { MainDetailsComponent } from './main-details/main-details.component';
 import { ButtonComponent } from './button/button.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { SummaryComponent } from './summary/summary.component';
 
 @NgModule({
-  declarations: [AppComponent, SideBarComponent, HeaderComponent, MainComponent, MainDetailsComponent, ButtonComponent, DropdownComponent],
+  declarations: [AppComponent, SideBarComponent, HeaderComponent, MainComponent, MainDetailsComponent, ButtonComponent, DropdownComponent, SummaryComponent],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
