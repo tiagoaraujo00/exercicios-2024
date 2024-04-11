@@ -1,0 +1,32 @@
+<app-dropdown
+  [dropdownTitle]="'Discussões'"
+  [dropdownMaxHeight]="'fit-content'"
+>
+  <div class="app-discussions-container">
+    <h3 class="app-discussions-container-title">
+      Compartilhe suas ideias ou dúvidas com os autores!
+    </h3>
+    <span class="app-discussions-container-icons">
+      <img src="assets/hand-icon.svg" alt="ícone de uma mão" />
+      <img src="assets/baloon-icon.svg" alt="ícone de um balão" />
+      <img src="assets/person-icon.svg" alt="ícone de uma pessoa" />
+    </span>
+    <p class="app-discussions-container-description">
+      Sabia que o maior estímulo no desenvolvimento científico e cultural é a
+      curiosidade? Deixe seus questionamentos ou sugestões para o autor!
+    </p>
+    <div class="app-discussions-container-create-topic">
+      <span class="app-discussions-container-create-topic-line"></span>
+      <button class="btn-create-topic">
+        <img src="assets/plus-icon.svg" />
+        <p>Criar tópico</p>
+      </button>
+    </div>
+    <div class="app-discussions-container-comments">comentários</div>
+    <form (submit)="handleCreateTopic($event)">
+      <input type="text" #assuntoInput placeholder="Assunto" />
+      <input type="text" #conteudoInput placeholder="Conteúdo" />
+      <button type="submit">Adicionar</button>
+    </form>
+  </div>
+</app-dropdown>
