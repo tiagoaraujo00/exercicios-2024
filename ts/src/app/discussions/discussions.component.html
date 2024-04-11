@@ -19,7 +19,7 @@
       <span class="app-discussions-container-create-topic-line"></span>
       <button class="btn-create-topic" (click)="handleUpdateIsCreateTopic()">
         <img src="assets/plus-icon.svg" />
-        <p>Criar tópico</p>
+        <p>criar tópico</p>
       </button>
     </div>
   </div>
@@ -36,13 +36,14 @@
         <label for="create-topic-subject">Assunto</label>
         <input
           id="create-topic-subject"
+          class="subject"
           type="text"
           #subjectInput
           placeholder="Defina um tópico sucinto para notificar os autores..."
         />
       </span>
       <span class="app-discussions-form-create-field">
-        <label for="create-topic-content">Conteúdo</label>
+        <label for="create-topic-content content">Conteúdo</label>
         <textarea
           id="create-topic-content"
           type="text"
@@ -50,7 +51,7 @@
         ></textarea>
       </span>
       <div class="app-discussions-form-create-send">
-        <button class="btn-send-topic" type="submit">enviar</button>
+        <button class="btn-send-topic" type="submit">Enviar</button>
       </div>
     </form>
   </div>
