@@ -2,7 +2,7 @@
   [dropdownTitle]="'Discussões'"
   [dropdownMaxHeight]="'fit-content'"
 >
-  <div class="app-discussions-container">
+  <div class="app-discussions-container" *ngIf="step === 1">
     <h3 class="app-discussions-container-title">
       Compartilhe suas ideias ou dúvidas com os autores!
     </h3>
@@ -17,16 +17,84 @@
     </p>
     <div class="app-discussions-container-create-topic">
       <span class="app-discussions-container-create-topic-line"></span>
-      <button class="btn-create-topic">
+      <button class="btn-create-topic" (click)="handleUpdateIsCreateTopic()">
         <img src="assets/plus-icon.svg" />
         <p>Criar tópico</p>
       </button>
     </div>
-    <div class="app-discussions-container-comments">comentários</div>
-    <form (submit)="handleCreateTopic($event)">
-      <input type="text" #assuntoInput placeholder="Assunto" />
-      <input type="text" #conteudoInput placeholder="Conteúdo" />
-      <button type="submit">Adicionar</button>
+  </div>
+
+  <div class="app-discussions-form" *ngIf="step === 2">
+    <p class="app-discussions-form-title">
+      Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!
+    </p>
+    <form
+      class="app-discussions-form-create"
+      (submit)="handleCreateTopic($event)"
+    >
+      <span class="app-discussions-form-create-field">
+        <label for="create-topic-subject">Assunto</label>
+        <input
+          id="create-topic-subject"
+          type="text"
+          #subjectInput
+          placeholder="Defina um tópico sucinto para notificar os autores..."
+        />
+      </span>
+      <span class="app-discussions-form-create-field">
+        <label for="create-topic-content">Conteúdo</label>
+        <textarea
+          id="create-topic-content"
+          type="text"
+          #contentInput
+        ></textarea>
+      </span>
+      <div class="app-discussions-form-create-send">
+        <button class="btn-send-topic" type="submit">enviar</button>
+      </div>
     </form>
+  </div>
+
+  <div class="app-discussions-container" *ngIf="step === 3">
+    <h3 class="app-discussions-container-title">
+      Seu tópico foi enviado com sucesso! :D
+    </h3>
+    <p class="app-discussions-container-description">
+      Agradecemos por sua contribuição, uma notificação será enviada ao seu
+      email assim que seu tópico for respondido!
+    </p>
+    <a class="app-discussions-container-link">Descubra outros trabalhos!</a>
+    <div class="app-discussions-container-create-topic">
+      <span class="app-discussions-container-create-topic-line"></span>
+      <button class="btn-create-topic" (click)="handleResetSteps()">
+        <p>criar novo tópico</p>
+      </button>
+    </div>
+    <div class="app-discussions-container-feedback">
+      <div class="app-discussions-container-feedback-content">
+        <img src="assets/check-icon.svg" alt="ícone de um check" />
+        <p>Aguardando feedback dos autores</p>
+        <a class="app-discussions-container-link">Descubra outros trabalhos!</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-discussions-container-comment">
+    <div
+      class="app-discussions-container-comment-item"
+      *ngFor="let item of values; let i = index"
+    >
+      <div class="app-discussions-container-comment-item-header">
+        <h3 class="app-discussions-container-comment-item-header-title">
+          {{ item.subject }}
+        </h3>
+        <small class="app-discussions-container-comment-item-header-name"
+          >Carlos Henrique Santos</small
+        >
+      </div>
+      <p class="app-discussions-container-comment-item-description">
+        {{ item.content }}
+      </p>
+    </div>
   </div>
 </app-dropdown>

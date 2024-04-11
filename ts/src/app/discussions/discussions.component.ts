@@ -8,15 +8,24 @@ import { IValues } from './discussions.interfaces';
 })
 export class DiscussionsComponent implements OnInit {
   values: Array<IValues> = [];
+  step = 1;
 
-  @ViewChild('assuntoInput', { static: false })
+  @ViewChild('subjectInput', { static: false })
   subject!: ElementRef<HTMLInputElement>;
-  @ViewChild('conteudoInput', { static: false })
+  @ViewChild('contentInput', { static: false })
   content!: ElementRef<HTMLInputElement>;
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  handleUpdateIsCreateTopic = () => {
+    this.step++;
+  };
+
+  handleResetSteps = () => {
+    this.step = 2;
+  };
 
   handleCreateTopic = (event: SubmitEvent) => {
     event.preventDefault();
@@ -30,6 +39,8 @@ export class DiscussionsComponent implements OnInit {
       this.subject.nativeElement.value = '';
       this.content.nativeElement.value = '';
     }
+
+    this.handleUpdateIsCreateTopic();
 
     console.log(this.values);
   };
