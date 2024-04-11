@@ -219,5 +219,14 @@
         font-weight: 400;
         font-size: var(--size-xs);
     }
+
+    &-more-info {
+      display: flex;
+      gap: 15px;
+      justify-content: flex-start;
+      align-items: center;
+      font-family: var(--font-quicksand);
+      font-size: 14px;
+    }
   }
 }

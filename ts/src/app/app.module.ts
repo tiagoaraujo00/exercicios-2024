@@ -10,9 +10,10 @@ import { ButtonComponent } from './button/button.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { SummaryComponent } from './summary/summary.component';
 import { DiscussionsComponent } from './discussions/discussions.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, SideBarComponent, HeaderComponent, MainComponent, MainDetailsComponent, ButtonComponent, DropdownComponent, SummaryComponent, DiscussionsComponent],
+  declarations: [AppComponent, SideBarComponent, HeaderComponent, MainComponent, MainDetailsComponent, ButtonComponent, DropdownComponent, SummaryComponent, DiscussionsComponent, FooterComponent],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
